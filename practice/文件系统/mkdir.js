@@ -11,7 +11,8 @@
 var fs = require("fs");
 
 console.log("创建目录 ../文件系统/tmp/test/");
-// tmp 目录必须存在
+
+// tmp 目录必须存在[如果目录不存在，会报错执行return conslole.error(err) 方法]
 fs.mkdir("./文件系统/tmp/test/",function(err){
    if (err) {
        return console.error(err);
